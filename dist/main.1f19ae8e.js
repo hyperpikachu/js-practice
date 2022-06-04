@@ -118,15 +118,21 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
-function sum(x, y) {
-  return x + y;
+var a = 5;
+
+function double() {
+  console.log(a * 2);
 }
 
-var a = sum(1, 3);
-var b = sum(4, 12);
-console.log(a);
-console.log(b);
-console.log(a + b); // import random from './getRandom'
+double();
+
+(function () {
+  console.log(a * 2);
+})();
+
+(function () {
+  console.log(a * 2);
+})(); // import random from './getRandom'
 // const a = random()
 // switch (a) {
 //   case 0:
@@ -199,7 +205,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "12563" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "1683" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

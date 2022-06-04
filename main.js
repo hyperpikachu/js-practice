@@ -1,12 +1,16 @@
-function sum(x, y) {
-  return x + y
+const a = 5
+function double() {
+  console.log(a * 2)
 }
-const a = sum(1, 3)
-const b = sum(4, 12)
+double();
 
-console.log(a)
-console.log(b)
-console.log(a + b)
+(function(){
+  console.log(a * 2) 
+})();
+
+(function () {
+  console.log(a * 2) 
+}());
 
 
 // import random from './getRandom'

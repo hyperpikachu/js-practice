@@ -118,65 +118,15 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
-var a = 5;
-
-function double() {
-  console.log(a * 2);
+function user(first, last) {
+  this.firstName = first;
+  this.lastName = last;
 }
 
-double();
-
-(function () {
-  console.log(a * 2);
-})();
-
-(function () {
-  console.log(a * 2);
-})(); // import random from './getRandom'
-// const a = random()
-// switch (a) {
-//   case 0:
-//     console.log('a is 0')
-//     break
-//   case 2:
-//     console.log('a is 2')
-//     break
-//   case 4:
-//     console.log('a is 4')
-//     break
-//   default:
-//     console.log('rest...')
-// }
-// // if (a === 0) {
-// //   console.log('a is 0')
-// // } else if (a === 2) {
-// //   console.log('a is 2')
-// // } else if (a === 4) {
-// //   console.log('a is 4')
-// // } else {
-// //   console.log('rest...')
-// // }
-// // // // 비교 연산자
-// // // const a = 1 === 1
-// // // const b = 'ab' === 'abc'
-// // // const c = false
-// // // console.log(a)
-// // // console.log(b)
-// // // console.log(c)
-// // // console.log('&&: ', a && b)
-// // // console.log('||: ', a || b || c)
-// // // console.log('!: ', !a)
-// // // // 산술 연산자
-// // console.log(1 + 2)
-// // console.log(5 - 7)
-// // console.log(3 * 4)
-// // console.log(10 / 2)
-// // console.log(7 % 5)
-// // // 할당 연산사
-// // let a = 2
-// // // a = a + 1
-// // a %= 1
-// // console.log(a)
+var heropy = new user('Heropy', 'Park');
+var amy = new user('Heropy', 'Park');
+var neo = new user('neo', 'smith');
+console.log(heropy);
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -205,7 +155,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "1683" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "8971" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
